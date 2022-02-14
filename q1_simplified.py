@@ -19,11 +19,18 @@ while(numero_digitado != ""):
 
 def mensagem(qtd_notas, valor_nota):
     qtd_notas = int(qtd_notas)
-    if(valor_nota > 1):
-        print('     ', int(qtd_notas), ' nota de ', valor_nota, ' reais')
+    if(qtd_notas == 1):
+        if(valor_nota > 1):
+            print('     ', int(qtd_notas), ' nota de ', valor_nota, ' reais')
+        else:
+            print('     ', int(qtd_notas), ' moeda de ', valor_nota, ' real')
     else:
-        print('     ', int(qtd_notas), ' nota de ', valor_nota, ' real')
-    
+        if(valor_nota > 1):
+            print('     ', int(qtd_notas), ' notas de ', valor_nota, ' reais')
+        else:
+            print('     ', int(qtd_notas), ' moedas de ', valor_nota, ' real')
+
+
 def numNotas(valor, valor_nota):
     if(valor >= valor_nota):
         notas = valor - (valor%valor_nota)
